@@ -1,0 +1,103 @@
+body {
+    display: block;
+}
+
+#bgHeader {
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    left: 0px;
+    top: 0px;
+    background-color: blue;
+}
+
+#digi {
+    position: absolute;
+    width: 100px;
+    left: 61px;
+    top: 17px;
+}
+
+#bgMenu {
+    position: absolute;
+    top: 30px;
+    right: 150px;
+    bottom: 30px;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+}
+
+#bgMenu a {
+    width: 13px;
+    position: absolute;
+    left: 14px;
+    top: 13px;
+}
+
+#bgIntro {
+    position: absolute;
+    width: 100%;
+    height: 668px;
+    top: 100px;
+    background-image: url(bg-img.jpg);
+    background-size: 100% 668px;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#introTitle {
+    height: 192px;
+    width: 513px;
+    left: 463px;
+    top: 107px;
+    font-size: 40px;
+}
+
+#introText {
+    height: 60px;
+    width: 886px;
+    left: 277px;
+    top: 317px;
+    font-size: 15px;
+}
+
+#back,
+#forward {
+    position: absolute;
+    height: 70px;
+    width: 70px;
+    right: 0px;
+    border-radius: 1px;
+    font-size: 30px;
+    color: #252525;
+}
+
+#back {
+    top: 264px;
+    background-color: blue;
+    border-color: blue;
+}
+
+#forward {
+    top: 335px;
+    background-color: white;
+    border-color: white;
+}
+
+#back p,
+#forward p {
+    margin-top: 20px;
+}
+
+#bgPromo {
+    position: absolute;
+    height: 192px;
+    width: 100%;
+    top: 768px;
+    background-color: rgb(12, 12, 199);
+}
