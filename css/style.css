@@ -3,12 +3,12 @@ body {
 }
 
 #bgHeader {
-    position: absolute;
+    position: relative;
     width: 100%;
     height: 100px;
     left: 0px;
     top: 0px;
-    background-color: blue;
+    background-color: #2b4074;
 }
 
 #digi {
@@ -36,12 +36,11 @@ body {
 }
 
 #bgIntro {
-    position: absolute;
+    position: relative;
     width: 100%;
     height: 668px;
-    top: 100px;
-    background-image: url(bg-img.jpg);
-    background-size: 100% 668px;
+    background-image: url(../images/Group_3.svg);
+    background-size: 100%;
     color: white;
     text-align: center;
     display: flex;
@@ -66,6 +65,20 @@ body {
     font-size: 15px;
 }
 
+#bgIntro button {
+    width: 200px;
+    height: 50px;
+    color: #2b4074;
+    background-color: white;
+    border-radius: 2px;
+    border-color: white;
+}
+
+#bgIntro button:hover {
+    color: white;
+    background-color: #2b4074;
+}
+
 #back,
 #forward {
     position: absolute;
@@ -79,14 +92,36 @@ body {
 
 #back {
     top: 264px;
-    background-color: blue;
-    border-color: blue;
+    background-color: #2b4074;
+    border-color: #2b4074;
+}
+
+#back div {
+    width: 18px;
+    height: 18px;
+    border: solid;
+    top: 25px;
+    left: 25px;
+    position: absolute;
+    border-color: #252525 #2b4074 #2b4074 #252525;
+    transform: rotate(-45deg);
 }
 
 #forward {
     top: 335px;
-    background-color: white;
-    border-color: white;
+    background-color: #fff;
+    background-color: #fff;
+}
+
+#forward div {
+    width: 18px;
+    height: 18px;
+    border: solid;
+    top: 25px;
+    left: 25px;
+    position: absolute;
+    border-color: #252525 #252525 #fff #fff;
+    transform: rotate(45deg);
 }
 
 #back p,
@@ -95,9 +130,232 @@ body {
 }
 
 #bgPromo {
-    position: absolute;
+    position: relative;
     height: 192px;
     width: 100%;
-    top: 768px;
-    background-color: rgb(12, 12, 199);
+}
+
+#bgPromo {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #2b4074;
+}
+
+#textPromo {
+    color: white;
+    width: 796px;
+    height: 74px;
+}
+
+#bgPromo button {
+    width: 200px;
+    height: 40px;
+    color: #2b4074;
+    background-color: white;
+    border-color: white;
+    border-radius: 2px;
+}
+
+#bgPromo button:hover {
+    color: white;
+    background-color: #2b4074;
+}
+
+#bgServises {
+    position: relative;
+    width: 100%;
+    height: 546px;
+    display: grid;
+    grid-template-columns: 25% 75%;
+    grid-template-rows: 546px;
+    box-sizing: border-box;
+}
+
+#content {
+    padding: 20% 10%;
+}
+
+#content h1 {
+    color: #2b4076;
+}
+
+#items {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    color: #4a4a4a;
+}
+
+.item {
+    width: 25%;
+    height: 273px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.item p,
+.item a {
+    opacity: 0;
+}
+
+.item:hover {
+    border: solid #2b4074;
+    /* background-color: #2b4074; */
+}
+
+.item:hover a,
+.item:hover p {
+    opacity: 1;
+}
+
+#bgRecentWork {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 618px;
+    background-image: url(../images/mask.svg);
+    color: white;
+}
+
+#portfolios {
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.portfolio {
+    position: relative;
+    color: #2b4074;
+    text-align: center;
+}
+
+.portfolio img {
+    border-radius: 4px;
+}
+
+.bgInfo {
+    position: absolute;
+    width: 243px;
+    height: 217px;
+    top: 11px;
+    left: 13px;
+    border-radius: 4px;
+    background-color: #fff;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bgInfo img {
+    margin: 10px;
+}
+
+.portfolio:hover .bgInfo {
+    opacity: 0.7;
+}
+
+#bgVideoBlock {
+    position: relative;
+    width: 100%;
+    height: 580px;
+    padding: 5px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 70%;
+    box-sizing: border-box;
+}
+
+.video img {
+    margin: 5% 20%;
+    width: 50%;
+    border-radius: 4px;
+}
+
+.videoInfo {
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.videoInfo img{
+    height: 8px;
+}
+
+.videoInfo h1 {
+    font-size: 2em;
+    color: #4a4a4a;
+}
+
+.videoInfo p {
+    color: #9B9B9B;
+}
+
+.videoInfo button {
+    width: 200px;
+    height: 50px;
+    color: #fff;
+    background-color: #2b4074;
+    border: solid #2b4074;
+}
+
+.videoInfo button:hover {
+    color: #2b4074;
+    background-color: #fff;
+    border: solid #2b4074;
+}
+
+#bgLatestNews{
+    position: relative;
+    width: 100%;
+    height: 1044px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.title{
+    color: #4a4a4a;
+}
+
+.allNews{
+    width: 80%;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 50% 50%;
+
+}
+
+.news {
+    position: relative;
+    color: #4a4a4a;
+    text-align: center;
+}
+
+.testimonial{
+    position: relative;
+    width: 100%;
+    height: 480px;
+    color: #4a4a4a;
+}
+
+.testimonial strong{
+    color: #2b4074;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
