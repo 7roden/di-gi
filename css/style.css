@@ -2,12 +2,10 @@ body {
     display: block;
 }
 
-#bgHeader {
+header {
     position: relative;
     width: 100%;
-    height: 100px;
-    left: 0px;
-    top: 0px;
+    min-height: 100px;
     background-color: #2b4074;
 }
 
@@ -38,9 +36,10 @@ body {
 #bgIntro {
     position: relative;
     width: 100%;
-    height: 668px;
+    min-height: 668px;
     background-image: url(../images/Group_3.svg);
-    background-size: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
     color: white;
     text-align: center;
     display: flex;
@@ -50,24 +49,20 @@ body {
 }
 
 #introTitle {
-    height: 192px;
-    width: 513px;
-    left: 463px;
-    top: 107px;
-    font-size: 40px;
+    min-height: 6em;
+    max-width: 12em;
+    font-size: 3em;
 }
 
 #introText {
-    height: 60px;
-    width: 886px;
-    left: 277px;
-    top: 317px;
-    font-size: 15px;
+    min-height: 2em;
+    max-width: 40em;
+    font-size: 1em;
 }
 
 #bgIntro button {
-    width: 200px;
-    height: 50px;
+    width: 12em;
+    height: 3em;
     color: #2b4074;
     background-color: white;
     border-radius: 2px;
@@ -82,44 +77,39 @@ body {
 #back,
 #forward {
     position: absolute;
-    height: 70px;
-    width: 70px;
+    height: 4.4em;
+    width: 4.4em;
     right: 0px;
     border-radius: 1px;
-    font-size: 30px;
     color: #252525;
 }
 
 #back {
-    top: 264px;
+    top: 16.5em;
     background-color: #2b4074;
     border-color: #2b4074;
 }
 
-#back div {
-    width: 18px;
-    height: 18px;
+#forward {
+    top: 20.9em;
+    background-color: #fff;
+    background-color: #fff;
+}
+
+#back div, #forward div {
+    width: 1em;
+    height: 1em;
     border: solid;
-    top: 25px;
-    left: 25px;
+    margin: 1.5em;
     position: absolute;
+}
+
+#back div{
     border-color: #252525 #2b4074 #2b4074 #252525;
     transform: rotate(-45deg);
 }
 
-#forward {
-    top: 335px;
-    background-color: #fff;
-    background-color: #fff;
-}
-
 #forward div {
-    width: 18px;
-    height: 18px;
-    border: solid;
-    top: 25px;
-    left: 25px;
-    position: absolute;
     border-color: #252525 #252525 #fff #fff;
     transform: rotate(45deg);
 }
@@ -133,10 +123,8 @@ body {
     position: relative;
     height: 192px;
     width: 100%;
-}
-
-#bgPromo {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
     background-color: #2b4074;
@@ -146,6 +134,7 @@ body {
     color: white;
     width: 796px;
     height: 74px;
+    font-size: 1em;
 }
 
 #bgPromo button {
@@ -228,6 +217,7 @@ body {
 #portfolios {
     width: 80%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
 }
 
@@ -288,7 +278,7 @@ body {
     align-items: flex-start;
 }
 
-.videoInfo img{
+.videoInfo img {
     height: 8px;
 }
 
@@ -315,7 +305,7 @@ body {
     border: solid #2b4074;
 }
 
-#bgLatestNews{
+#bgLatestNews {
     position: relative;
     width: 100%;
     height: 1044px;
@@ -327,16 +317,20 @@ body {
     box-sizing: border-box;
 }
 
-.title{
+.title {
     color: #4a4a4a;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.allNews{
+.allNews {
     width: 80%;
+    box-sizing: border-box;
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
     grid-template-rows: 50% 50%;
-
 }
 
 .news {
@@ -345,7 +339,26 @@ body {
     text-align: center;
 }
 
-.testimonial{
+.newsTitle{
+position: absolute;
+bottom: 0px;
+margin: 0px 15px;
+width: 90%;
+background-color: #fff;
+}
+
+.news:hover img{
+    border: 10px solid #2b4074;
+    border-radius: 2px;
+}
+
+.news:hover .newsTitle{
+    margin: 25px 15px;
+    background-color: #2b4074;
+    color: #fff;
+}
+
+.testimonial {
     position: relative;
     width: 100%;
     height: 480px;
@@ -362,10 +375,102 @@ body {
     font-size: 1.5em;
 }
 
-.blockquote p{
+.blockquote p {
     font-size: 0.8em;
 }
 
-.testimonial strong{
+.testimonial strong {
     color: #2b4074;
+}
+
+footer {
+    position: relative;
+    width: 100%;
+    height: 728px;
+    background-color: #2b4074;
+    color: #fff;
+    padding: 5% 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+.watchbutton {
+    position: absolute;
+    width: 230px;
+    height: 60px;
+    top: -30px;
+    right: calc(50% - 115px);
+    background-color: #2b4074;
+    left: auto;
+    background-image: url(../images/Group_2_1.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.text, .widgets, .social {
+    width: 80%;
+    height: 20%;
+    margin: 0 10%;
+    box-sizing: border-box;
+}
+
+.text {
+    position: relative;
+    font-size: 1.5em;
+}
+
+.widgets,
+.social {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+.social div,  .widgets div{
+    width: 25%;
+}
+.social div {
+    height: 63px;
+    border: solid #fff;
+    border-right: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.social div:first-child {
+    border-left: none;
+}
+
+.copyright {
+    position: absolute;
+    width: 100%;
+    height: 42px;
+    bottom: 0px;
+    background-color: #fff;
+    color: #2b4074;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#up {
+    width: 14px;
+    height: 14px;
+    border: solid;
+    border-color: #2b4074 #2b4074 #fff #fff;
+    transform: rotate(-45deg);
+    margin: 25px;
 }
