@@ -647,6 +647,7 @@ footer a {
 
     #items {
         grid-template-columns: repeat(1, 1fr);
+        height: 2184px;
     }
 
     .watchbutton {
